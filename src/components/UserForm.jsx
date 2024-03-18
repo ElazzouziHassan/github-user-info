@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react'
 
 export default function UserForm({getUser}) {
@@ -6,17 +7,22 @@ export default function UserForm({getUser}) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try{
-      const res = await fetch(`https://api.github.com/users/${username}`);
-      if (!res.ok) {
-        throw new Error('User not found');
-      }
-      const userData = await res.json();
-      getUser(userData);
-      setUsername('');
-    }catch (err){
-      console.error('Error fetching user data:', err);
-    }
+    const response = await axios.get(`https://api.github.com/users/${username}`);
+    getUser(response.data);
+    setUsername('');
+    // *****************************************************************************
+    // try{
+    //   const res = await fetch(`https://api.github.com/users/${username}`);
+    //   if (!res.ok) {
+    //     throw new Error('User not found');
+    //   }
+    //   const userData = await res.json();
+    //   getUser(userData);
+    //   setUsername('');
+    // }catch (err){
+    //   console.error('Error fetching user data:', err);
+    // }
+    // *****************************************************************************
   }
 
   return (
