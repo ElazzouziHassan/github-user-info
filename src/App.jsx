@@ -1,10 +1,13 @@
 import './App.css'
+import UserForm from './components/UserForm'
+import UserInfo from './components/UserInfo'
 
 function App() {
 
   return (
     <>
-      <h1>main app</h1>
+      <UserForm/>
+      <UserInfo/>
     </>
   )
 }
