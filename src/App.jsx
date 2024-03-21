@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css'
-import UserForm from './components/UserForm'
-import UserInfo from './components/UserInfo'
+import UserForm from './components/form/UserForm'
+import UserInfo from './components/info/UserInfo'
 
 function App() {
 
@@ -12,11 +12,15 @@ function App() {
   };
 
   return (
-    <>
+    <div className="app">
       <h1>GitHub User Info</h1>
-      <UserForm getUser={getUser} />
-      <UserInfo user={user} />
-    </>
+      <div className="form">
+        <UserForm getUser={getUser} />
+      </div>
+      <div className="info">
+        <UserInfo user={user} />
+      </div>
+    </div>
   )
 }
 
