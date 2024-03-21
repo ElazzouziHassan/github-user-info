@@ -13,7 +13,9 @@ function App() {
 
   return (
     <div className="app">
-      <h1>GitHub User Info</h1>
+      <div className="heading">
+        <h1>GitHub User Info</h1>
+      </div>
       <div className="main">
         <div className="form">
           <UserForm getUser={getUser} />
