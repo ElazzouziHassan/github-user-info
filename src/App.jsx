@@ -15,14 +15,10 @@ function App() {
     <div className="app">
       <div className="heading">
         <h1>GitHub User Info</h1>
+        <UserForm className="form" getUser={getUser} />
       </div>
       <div className="main">
-        <div className="form">
-          <UserForm getUser={getUser} />
-        </div>
-        <div className="info">
-          <UserInfo user={user} />
-        </div>
+        <UserInfo user={user} />
       </div>
     </div>
   )
