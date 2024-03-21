@@ -1,6 +1,13 @@
 .app{
-  h1{
-
+  .heading{
+    height: 7dvh;
+    width: 100%;
+    background: #EEEEEE;
+    h1{
+      color: #76ABAE;
+      text-align: center;
+      padding: 5px;
+    }
   }
   .main{
     display: flex;
