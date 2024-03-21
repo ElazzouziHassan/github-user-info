@@ -1,10 +1,7 @@
 .user-form{
-  background: #EEEEEE;
   form{
     display: flex;
-    flex-direction: column;
     div{
-      margin-bottom: 15px;
       input{
         padding: 10px;
         border: 1px solid #ccc;
@@ -12,24 +9,28 @@
         font-size: 16px;
         width: 100%;
         box-sizing: border-box;
+
         &:focus {
           outline: none;
-          border-color: #007bff; 
+          border-color: #465769; 
         }
       }
     }
     button{
+      margin-right: 10dvw;
+      margin-left: 2dvw;
       padding: 10px 20px;
-      background-color: #2a2d30; 
-      color: #fff;
+      background-color: #e2e9f0; 
+      color: #5c5b5b;
       border: none;
       border-radius: 5px;
-      font-size: 16px;
+      font-size: 18px;
       cursor: pointer;
       transition: background-color 0.3s ease;
 
       &:hover {
-        background-color: #52575c; 
+        background-color: #8ea5bd; 
+        color: #111111;
       }
     }
   }
